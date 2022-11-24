@@ -8,7 +8,7 @@ export default function Home() {
 				<h1 className='animate-right'>
 					I create <span className='process'>full stack applications.</span>
 				</h1>
-				<a href=''>View My Work</a>
+				<a href='https://docs.google.com/document/d/1k69X7p3aRDJbZYn-zoAQstD3MNLTcVwjmR8Bxyqc9-4/edit?usp=sharing'>View My Resume</a>
 			</div>
 		</div>
 	);
