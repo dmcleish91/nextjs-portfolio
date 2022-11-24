@@ -1,26 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --color-purple: #7a18ec;
+  --color-white: #fff;
+  --color-black-1: #111;
+  --color-black-2: #222;
+  --color-black-3: #444;
+  --speed-normal: 0.5s;
+  --speed-fast: 0.8s;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #242424;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 }
+
+.card {
+
+
+  max-width: 1000px;
+  max-height: 1000px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: .2rem;
+}
+
+.name {
+  color: rgb(255, 184, 28)
+}
+
+.process {
+  color: rgb(0, 119, 73)
+}
+
+/* Fade In Animation for invisible card because no one checks */
+.fade-in {
+  animation: opac 1s
+}
+
+@keyframes opac {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* From Left Animation */
+
+.animate-left {
+  position: relative;
+  animation: animateleft 1s
+}
+
+@keyframes animateleft {
+  from {
+    left: -300px;
+    opacity: 0
+  }
+
+  to {
+    left: 0;
+    opacity: 1
+  }
+}
+
+/* From Right Animation */
+
+.animate-right {
+  position: relative;
+  animation: animateright 1s
+}
+
+@keyframes animateright {
+  from {
+    right: -300px;
+    opacity: 0
+  }
+
+  to {
+    right: 0;
+    opacity: 1
+  }
+}
+
+/* Pixel Button */
 
 a {
-  color: inherit;
+  position: relative;
+  width: 180px;
+  height: 60px;
+  margin: 20px;
+  line-height: 60px;
+  letter-spacing: 2px;
   text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-white);
+  transition: var(--speed-normal);
+  border: 1px solid var(--color-purple);
+
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+  border: 1px solid transparent;
+  background: var(--color-purple) url(https://i.postimg.cc/FzBWFtKM/pixel2.png);
+  transition-delay: 0.8s;
+  background-size: 180px;
+  animation: animate var(--speed-fast) steps(8) forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@keyframes animate {
+  0% {
+    background-position-y: 0;
   }
-  body {
-    color: white;
-    background: black;
+
+  100% {
+    background-position-y: -480px;
   }
 }
