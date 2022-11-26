@@ -18,18 +18,18 @@ body {
   background-color: #242424;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  overflow: hidden;
 }
 
 .card {
-
-
-  max-width: 1000px;
+  min-width: 572px;
   max-height: 1000px;
 
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  /* margin: -35px -35px 0 0; */
 
   display: flex;
   flex-direction: column;
