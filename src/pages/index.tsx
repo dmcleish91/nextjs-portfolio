@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import Typewriter from 'typewriter-effect';
 
 export default function Home() {
 	return (
@@ -20,6 +19,8 @@ export default function Home() {
 					className='start-point'
 					href={'about'}>
 					<motion.h2
+						initial={{ opacity: 0, y: 25 }}
+						animate={{ opacity: 1, y: 0, transition: { delay: 0.8, duration: 0.6 } }}
 						whileHover={{ scale: 1.05 }}
 						whileTap={{ scale: 0.95 }}>
 						View my Blog

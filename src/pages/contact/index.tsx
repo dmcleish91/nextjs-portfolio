@@ -1,20 +1,14 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-export default function AboutHome() {
-	const router = useRouter();
+export default function ContactPage() {
 	return (
 		<div className='container'>
 			<article className='blog-container'>
 				<Link
 					className='name-logo nav-link'
-					href={'/'}>
-					<motion.h1
-						whileHover={{ color: 'rgb(255, 184, 28)' }}
-						whileTap={{ scale: 0.95 }}>
-						Dwight McLeish Jr
-					</motion.h1>
+					href={''}>
+					<h1>Contact</h1>
 				</Link>
 				<motion.div className='nav-line'>
 					<Link
@@ -46,20 +40,24 @@ export default function AboutHome() {
 					</Link> */}
 				</motion.div>
 				<motion.div>
-					<p>I&#x27;m a Junior Developer at Spectrum Inc.</p>
 					<p>
-						I <motion.span whileHover={{ color: '#FFC0CB' }}>hope</motion.span> this space will motivate anyone new to software
-						development to never give up. Programming is hard... but we are a stubbern breed and will always keep trying.
+						<a
+							className='nav-link'
+							href='https://docs.google.com/document/d/1k69X7p3aRDJbZYn-zoAQstD3MNLTcVwjmR8Bxyqc9-4/edit?usp=sharing'>
+							Resume
+						</a>
+					</p>
+					<p>
+						<a
+							className='nav-link'
+							href='https://github.com/dmcleish91'>
+							Github
+						</a>
 					</p>
 				</motion.div>
-
-				<motion.footer
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1, transition: { delay: 1, duration: 0.6 } }}>
-					<p>
-						Made with <motion.span whileHover={{ color: '#ff0000' }}>&#x2764;</motion.span>
-					</p>
-				</motion.footer>
+				<footer>
+					<p>Let's create something</p>
+				</footer>
 			</article>
 		</div>
 	);

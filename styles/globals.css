@@ -76,9 +76,16 @@ body {
   text-decoration: none;
 }
 
+.name-logo {
+  cursor: pointer;
+  text-decoration: none;
+  width: 250px;
+}
+
 p {
   line-height: 2rem;
 }
+
 
 /* Fade In Animation for invisible card because no one checks */
 /* .fade-in {
