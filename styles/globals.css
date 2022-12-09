@@ -18,30 +18,34 @@ body {
   background-color: #242424;
   font-family: 'Montserrat', sans-serif;
   color: white;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .card {
-  min-width: 572px;
-  max-height: 1000px;
-
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 572px;
+  letter-spacing: .2rem;
   /* margin: -35px -35px 0 0; */
-
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 100;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  letter-spacing: .2rem;
+.start-point {
+  color: white;
+  text-decoration: none;
+}
+
+.canvas {
+  position: fixed;
 }
 
 .name {
@@ -52,8 +56,32 @@ h5 {
   color: rgb(0, 119, 73)
 }
 
+.blog-container {
+  width: 661px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 100;
+}
+
+.nav-line {
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  line-height: 2rem;
+}
+
 /* Fade In Animation for invisible card because no one checks */
-.fade-in {
+/* .fade-in {
   animation: opac 1s
 }
 
@@ -65,11 +93,11 @@ h5 {
   to {
     opacity: 1
   }
-}
+} */
 
 /* From Left Animation */
 
-.animate-left {
+/* .animate-left {
   position: relative;
   animation: animateleft 1s
 }
@@ -84,7 +112,7 @@ h5 {
     left: 0;
     opacity: 1
   }
-}
+} */
 
 /* From Right Animation */
 
@@ -107,7 +135,7 @@ h5 {
 
 /* Pixel Button */
 
-a {
+.pixel {
   position: relative;
   width: 180px;
   height: 60px;
@@ -123,7 +151,7 @@ a {
 
 }
 
-a:hover {
+.pixel:hover {
   border: 1px solid transparent;
   background: var(--color-purple) url(https://i.postimg.cc/FzBWFtKM/pixel2.png);
   transition-delay: 0.8s;
