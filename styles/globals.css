@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
 
 :root {
   --color-purple: #7a18ec;
@@ -29,14 +29,15 @@ body {
 }
 
 .card {
-  max-width: 572px;
-  letter-spacing: .2rem;
-  /* margin: -35px -35px 0 0; */
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 972px;
+  letter-spacing: 0.2rem;
+  text-align: center;
   z-index: 100;
+  font-size: 28px;
+}
+
+h1 {
+  margin: 0;
 }
 
 .start-point {
@@ -49,11 +50,11 @@ body {
 }
 
 .name {
-  color: rgb(255, 184, 28)
+  color: rgb(255, 184, 28);
 }
 
 .process {
-  color: rgb(0, 119, 73)
+  color: rgb(0, 119, 73);
 }
 
 .blog-container {
@@ -85,7 +86,6 @@ body {
 p {
   line-height: 2rem;
 }
-
 
 /* Fade In Animation for invisible card because no one checks */
 /* .fade-in {
@@ -125,18 +125,18 @@ p {
 
 .animate-right {
   position: relative;
-  animation: animateright 1s
+  animation: animateright 1s;
 }
 
 @keyframes animateright {
   from {
     right: -300px;
-    opacity: 0
+    opacity: 0;
   }
 
   to {
     right: 0;
-    opacity: 1
+    opacity: 1;
   }
 }
 
@@ -155,7 +155,6 @@ p {
   color: var(--color-white);
   transition: var(--speed-normal);
   border: 1px solid var(--color-purple);
-
 }
 
 .pixel:hover {

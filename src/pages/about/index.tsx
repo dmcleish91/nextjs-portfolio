@@ -7,7 +7,7 @@ export default function AboutHome() {
   return (
     <div className='container'>
       <article className='blog-container'>
-        <Link
+        {/* <Link
           className='name-logo nav-link'
           href={'/'}>
           <motion.h1
@@ -15,23 +15,15 @@ export default function AboutHome() {
             whileTap={{ scale: 0.95 }}>
             Dwight McLeish Jr
           </motion.h1>
-        </Link>
+        </Link> */}
         <motion.div className='nav-line'>
-          <Link
-            href={'/'}
-            className='nav-link'>
-            <motion.p
-              whileHover={{ color: 'rgb(255, 184, 28)', scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}>
+          <Link href={'/'} className='nav-link'>
+            <motion.p whileHover={{ color: 'rgb(255, 184, 28)', scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Return
             </motion.p>
           </Link>
-          <Link
-            href={'contact'}
-            className='nav-link'>
-            <motion.p
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}>
+          <Link href={'contact'} className='nav-link'>
+            <motion.p whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               Contact
             </motion.p>
           </Link>
@@ -44,9 +36,7 @@ export default function AboutHome() {
           </p>
         </motion.div>
 
-        <motion.footer
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 1, duration: 0.6 } }}>
+        <motion.footer initial={{ opacity: 0 }} animate={{ opacity: 1, transition: { delay: 1, duration: 0.6 } }}>
           <p>
             Made with <motion.span whileHover={{ color: '#ff0000' }}>&#x2764;</motion.span>
           </p>
