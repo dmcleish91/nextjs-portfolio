@@ -1,15 +1,12 @@
 const canvasDots = function () {
-	const canvas = document.querySelector('canvas'),
-		ctx = canvas.getContext('2d'),
-		colorDot = ['rgb(0, 119, 73)', 'rgb(0, 119, 73)', 'rgb(0, 119, 73)', 'rgb(0, 119, 73)', 'rgb(255, 184, 28)'], // 80% of dots are green. 20% yellow
-		color = 'rgb(81, 162, 233)'; // What is this?
+	const canvas = document.querySelector('canvas');
+	const ctx = canvas.getContext('2d');
+	const colorDot = ['rgb(0, 119, 73)', 'rgb(0, 119, 73)', 'rgb(0, 119, 73)', 'rgb(0, 119, 73)', 'rgb(255, 184, 28)']; // 80% of dots are green. 20% yellow
+	const color = 'rgb(81, 162, 233)'; // What is this?
 
-	// ctx.globalAlpha = 0.8;
 	canvas.width = document.body.scrollWidth;
 	canvas.height = window.innerHeight;
 	canvas.style.display = 'block';
-	// ctx.fillStyle = colorDot;
-	// ctx.fillStyle = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
 	ctx.lineWidth = 0.3;
 	ctx.strokeStyle = color;
 
@@ -65,31 +62,6 @@ const canvasDots = function () {
 		};
 	}
 
-	// decided to turn off connecting dots under 1100px
-
-	// } else if (windowSize > 650) {
-	//   dots = {
-	//     nb: 400,
-	//     distance: 50,
-	//     d_radius: 185,
-	//     array: [],
-	//   };
-	// } else if (windowSize > 500) {
-	//   dots = {
-	//     nb: 325,
-	//     distance: 45,
-	//     d_radius: 170,
-	//     array: [],
-	//   };
-	// } else {
-	//   dots = {
-	//     nb: 270,
-	//     distance: 45,
-	//     d_radius: 140,
-	//     array: [],
-	//   };
-	// }
-
 	function Dot() {
 		this.x = Math.random() * canvas.width;
 		this.y = Math.random() * canvas.height;
@@ -99,7 +71,6 @@ const canvasDots = function () {
 
 		this.radius = Math.random() * 1.5;
 
-		// this.colour = 'hsl(' + 360 * Math.random() + ', 50%, 50%)';
 		this.colour = colorDot[Math.floor(Math.random() * colorDot.length)];
 	}
 
@@ -107,7 +78,6 @@ const canvasDots = function () {
 		create: function () {
 			ctx.beginPath();
 			ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-			// ctx.fillStyle = this.colour;
 
 			// make the dot colour fade out the further they are from the mouse
 			const dotDistance = ((this.x - mousePosition.x) ** 2 + (this.y - mousePosition.y) ** 2) ** 0.5;
@@ -204,7 +174,7 @@ const canvasDots = function () {
 			dots.array[0].x = parameter.pageX;
 			dots.array[0].y = parameter.pageY;
 		} catch {
-			//
+			console.log('An error occurred');
 		}
 	};
 
@@ -216,12 +186,11 @@ const canvasDots = function () {
 	window.onresize = function () {
 		clearInterval(draw);
 		canvasDots();
-		// console.log(yippe);
 	};
 };
 
 window.onload = function () {
-	//canvasDotsBg();
+
 	canvasDots();
 };
 
