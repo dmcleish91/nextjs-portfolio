@@ -13,20 +13,15 @@ export default function App({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <title>Dwight Mcleish | Developer</title>
+        <meta name='description' content='Dwight Mcleish Jr Portfolio Site' />
       </Head>
       <div className='canvas'>
         <canvas className='connecting-dots'></canvas>
       </div>
 
-      <Script
-        src='main.js'
-        strategy='beforeInteractive'></Script>
+      <Script src='main.js' strategy='beforeInteractive'></Script>
       <AnimatePresence mode='wait'>
-        <motion.div
-          key={router.route}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}>
+        <motion.div key={router.route} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
